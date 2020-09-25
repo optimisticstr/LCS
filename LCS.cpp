@@ -61,3 +61,26 @@ int LCSLength(char *s1, char *s2){
 	}
 	return c[m][n];
 }
+
+//Function definitions (printLCS)-------------------
+void printLCS(char s[], int i, int j)
+{
+	if(i==0 || j==0)
+	{
+		return;
+	}
+	if(b[i][j] == 'd')
+	{
+		printLCS(s, i-1, j-1);
+		cout << s[i-1]; //printing LCS characters
+	}
+	else if(b[i][j] == 'u')
+	{
+		printLCS(s, i-1, j);
+	}
+	else
+	{
+		printLCS(s, i, j-1);
+	}
+}
+
