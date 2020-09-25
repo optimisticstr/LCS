@@ -24,3 +24,25 @@ int main()
     cout<<" of length "<< len <<endl;
     return 0;
 }
+//Function definitions (printLCS)-------------------
+void printLCS(char s[], int i, int j)
+{
+	if(i==0 || j==0)
+	{
+		return;
+	}
+	if(b[i][j] == 'd')
+	{
+		printLCS(s, i-1, j-1);
+		cout << s[i-1]; //printing LCS characters
+	}
+	else if(b[i][j] == 'u')
+	{
+		printLCS(s, i-1, j);
+	}
+	else
+	{
+		printLCS(s, i, j-1);
+	}
+}
+
