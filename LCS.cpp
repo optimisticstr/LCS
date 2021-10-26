@@ -1,11 +1,10 @@
-//here the code begins
 #include<iostream>
 #include<string.h>
 using namespace std;
 
-char b[50][50]; //Global 2D char arr
+char b[50][50];
 
-//Protos
+//Proto
 int LCSLength(char *s1, char *s2);
 void printLCS(char s[], int i, int j);
 
@@ -16,11 +15,11 @@ int main()
 	cin >> s1;
 	cout<<"Enter 2nd string: ";
 	cin >> s2;
-	int len = LCSLength(s1, s2);
+	int len = LCSLength(s1, s2); //LCS length function call
     int m = strlen(s1);
-	int n = strlen(s2);
+	int n = strlen(s2); //strlen from string.h library
 	cout << "The LCS is ";
-    printLCS(s1, m, n);
+    printLCS(s1, m, n); //print LCS function call
     cout<<" of length "<< len <<endl;
     return 0;
 }
